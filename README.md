@@ -41,22 +41,22 @@ El Sistema deberá enviar recomendaciones al motoquero 24 horas antes de la fech
 - *Precauciones según el clima*: El Sistema debe consultar, mínimamente, a dos proveedores el clima que se espera para los días que involucran el viaje. El tipo de integración que ofrecen estos Sistemas es API REST y se recomienda utilizar *AccuWeather* y *Windguru*.
 - *Tips de seguridad y sugerencias de equipamiento*: Para poder realizar estas recomendaciones decidimos consultarle a GPT4. Para ello debemos enviarle el detalle del camino no convencional a realizar y el clima esperado para los días involucrados, mediante un POST a la URL que nos brinda. La respuesta que nos brindará GPT4 tendrá el siguiente formato:
 
-   ```json
-   {
-      "recommendation": {
-         "activity": "viaje en motocicleta al sur",
-         "safety_tips": [
-            "Revisa tu motocicleta antes de salir..."
-         ],
-         "equipment_suggestions": [
-            {
-               "item": "Casco integral",
-               "description": "Utiliza un casco integral..."
-            },
-         ]
-      }
+```json
+{
+   "recommendation": {
+      "activity": "viaje en motocicleta al sur",
+      "safety_tips": [
+         "Revisa tu motocicleta antes de salir..."
+      ],
+      "equipment_suggestions": [
+         {
+            "item": "Casco integral",
+            "description": "Utiliza un casco integral..."
+         },
+      ]
    }
-   ```
+}
+```
 
 ## Feedback de viajes
 
